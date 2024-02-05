@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwg7nb1konyqk"]
+
+[ext_resource type="Texture2D" uid="uid://dj3uw0ip6wsdp" path="res://Sprites/Main Characters/Virtual Guy/Jump (32x32).png" id="1_pddix"]
+[ext_resource type="Script" path="res://dino.gd" id="1_u1h1h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70k4u"]
+size = Vector2(34, 46)
+
+[node name="Dino" type="CharacterBody2D"]
+script = ExtResource("1_u1h1h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.03, 2.03)
+texture = ExtResource("1_pddix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_70k4u")
